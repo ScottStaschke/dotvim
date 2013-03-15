@@ -20,6 +20,4 @@ set expandtab
 set autoindent
 set smarttab
 
-colorscheme jelleybeans
-
-au VimEnter * NERDTree ~/work/www
+au VimEnter * NERDTree /work/www
