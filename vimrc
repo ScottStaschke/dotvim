@@ -12,6 +12,7 @@ silent! nmap <F2> :NERDTreeToggle /home/scott/work/www<CR>
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+set nocp
 set nowrap
 set backspace=indent,eol,start
 set autoindent

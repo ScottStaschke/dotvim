@@ -9,4 +9,4 @@
 	url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/zoomwin"]
 	path = bundle/zoomwin
-	url = https://github.com/vim-scripts/ZoomWin.git
+	url = https://github.com/regedarek/ZoomWin.git
