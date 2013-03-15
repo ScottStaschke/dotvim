@@ -7,10 +7,25 @@ syntax on
 filetype plugin indent on
 
 let mapleader=","
+nmap <leader>w :w!<CR>
 
 silent! nmap <F2> :NERDTreeToggle /home/scott/work/www<CR>
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
+map <silent> <leader><CR> :noh<CR>
+
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-h> <C-w>h
+map <C-l> <C-w>l
+
+map 0 ^
+
+noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+
+nmap <leader><leader>o :ZoomWin<CR>
+
+nmap ; :
 
 set nocp
 set nowrap
@@ -34,5 +49,11 @@ set autoindent
 set smarttab
 set hidden
 set incsearch
+set so=7
 
 colorscheme jelleybeans
+
+augroup sparkup_types
+  autocmd!
+  autocmd FileType php runtime! ftplugin/html/sparkup.vim
+augroup END
