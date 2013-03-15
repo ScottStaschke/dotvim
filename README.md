@@ -1,4 +1,0 @@
-dotvim
-======
-
-Vim config files
