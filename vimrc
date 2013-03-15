@@ -8,6 +8,18 @@ filetype plugin indent on
 
 let mapleader=","
 
+silent! nmap <F2> :NERDTreeToggle /home/scott/work/www<CR>
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+set nowrap
+set backspace=indent,eol,start
+set autoindent
+set copyindent
+set showmatch
+set hlsearch
+set nobackup
+set noswapfile
 set number
 set ruler
 set background=dark
@@ -19,7 +31,7 @@ set shiftwidth=2
 set expandtab
 set autoindent
 set smarttab
+set hidden
+set incsearch
 
 colorscheme jelleybeans
-
-au VimEnter * NERDTree ~/work/www
