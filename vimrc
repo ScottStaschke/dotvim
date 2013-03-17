@@ -1,6 +1,6 @@
 set nocompatible
 
-call pathogen#runtime_append_all_bundles()
+execute pathogen#infect()
 call pathogen#helptags()
 
 syntax on
@@ -8,16 +8,17 @@ filetype plugin indent on
 
 let mapleader=","
 nmap <leader>w :w!<CR>
+imap jj <Esc>
 
 silent! nmap <F2> :NERDTreeToggle /home/scott/work/www<CR>
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
-map <silent> <leader><CR> :noh<CR>
+map <silent> <leader><space> :noh<CR>
 
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-h> <C-w>h
-map <C-l> <C-w>l
+nnoremap <leader>j <C-w>j<C-w>_
+nnoremap <leader>k <C-w>k<C-w>_
+nnoremap <leader>h <C-w>h<C-w>_
+nnoremap <leader>l <C-w>l<C-w>_
 
 map 0 ^
 
