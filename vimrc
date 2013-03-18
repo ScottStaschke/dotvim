@@ -10,21 +10,21 @@ let mapleader=","
 nmap <leader>w :w!<CR>
 imap jj <Esc>
 
-silent! nmap <F2> :NERDTreeToggle /home/scott/work/www<CR>
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 map <silent> <leader><space> :noh<CR>
 
-nnoremap <leader>j <C-w>j<C-w>_
-nnoremap <leader>k <C-w>k<C-w>_
-nnoremap <leader>h <C-w>h<C-w>_
-nnoremap <leader>l <C-w>l<C-w>_
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>h <C-w>h
+nnoremap <leader>l <C-w>l
+nnoremap <leader>r <C-w>=
 
 map 0 ^
 
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+noremap <leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-nmap <leader><leader>o :ZoomWin<CR>
+nmap <leader>z :ZoomWin<CR>
 
 nmap ; :
 
@@ -52,9 +52,16 @@ set hidden
 set incsearch
 set so=7
 
-colorscheme jelleybeans
+colorscheme jellybeans
 
 augroup sparkup_types
   autocmd!
   autocmd FileType php runtime! ftplugin/html/sparkup.vim
 augroup END
+
+let g:netrw_liststyle=3
+let g:netrw_preview=1
+let g:netrw_browse_split=2
+let g:netrw_altv=1
+
+se guioptions=agim

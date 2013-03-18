@@ -25,3 +25,9 @@
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
+[submodule "bundle/monokai-refined"]
+	path = bundle/monokai-refined
+	url = https://github.com/jaromero/vim-monokai-refined.git
+[submodule "bundle/scrollcolor"]
+	path = bundle/scrollcolor
+	url = https://github.com/vim-scripts/ScrollColors.git
