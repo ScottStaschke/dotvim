@@ -68,10 +68,6 @@ se guioptions=agim
 
 if has('win32') || has ('win64')
   let $MYVIMRC='C:\Users\scotts\Documents\GitHub\dotvim\vimrc'
-  let g:netrw_cygwin = 0
-  let g:netrw_list_cmd = 'C:\"Program Files (x86)"\PuTTY\plink.exe -pw scotts scotts@scott.membersforlife.org ls -Fa '
-  let g:netrw_ssh_cmd = 'C:\"Program Files (x86)"\PuTTY\plink.exe -T -ssh'
-  let g:netrw_scp_cmd = 'C:\"Program Files (x86)"\PuTTY\pscp.exe -pw scotts -scp'
   cd W:\
   nmap <silent> <F2> :execute 'NERDTreeToggle W:\'<CR>
 else
