@@ -14,11 +14,10 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 map <silent> <leader><space> :noh<CR>
 
-nnoremap <leader>j <C-w>j
-nnoremap <leader>k <C-w>k
-nnoremap <leader>h <C-w>h
-nnoremap <leader>l <C-w>l
-nnoremap <leader>r <C-w>=
+nnoremap <leader>j <C-w>j0
+nnoremap <leader>k <C-w>k0
+nnoremap <leader>h <C-w>h0
+nnoremap <leader>l <C-w>l0
 
 map 0 ^
 
@@ -52,7 +51,7 @@ set hidden
 set incsearch
 set so=7
 
-colorscheme jellybeans
+colorscheme molokai
 
 augroup sparkup_types
   autocmd!
@@ -61,7 +60,20 @@ augroup END
 
 let g:netrw_liststyle=3
 let g:netrw_preview=1
-let g:netrw_browse_split=2
+let g:netrw_browse_split=4
 let g:netrw_altv=1
+let g:netrw_silent=1
 
 se guioptions=agim
+
+if has('win32') || has ('win64')
+  let $MYVIMRC='C:\Users\scotts\Documents\GitHub\dotvim\vimrc'
+  let g:netrw_cygwin = 0
+  let g:netrw_list_cmd = 'C:\"Program Files (x86)"\PuTTY\plink.exe -pw scotts scotts@scott.membersforlife.org ls -Fa '
+  let g:netrw_ssh_cmd = 'C:\"Program Files (x86)"\PuTTY\plink.exe -T -ssh'
+  let g:netrw_scp_cmd = 'C:\"Program Files (x86)"\PuTTY\pscp.exe -pw scotts -scp'
+  cd W:\
+  nmap <silent> <F2> :execute 'NERDTreeToggle W:\'<CR>
+else
+  nmap <silent> <F2> :execute 'NERDTreeToggle /home/scott/work/'<CR>
+endif
