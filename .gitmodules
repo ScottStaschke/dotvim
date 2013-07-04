@@ -31,3 +31,6 @@
 [submodule "bundle/scrollcolor"]
 	path = bundle/scrollcolor
 	url = https://github.com/vim-scripts/ScrollColors.git
+[submodule "bundle/sftp-sync"]
+	path = bundle/sftp-sync
+	url = http://github.com/eshion/vim-sftp-sync.git
